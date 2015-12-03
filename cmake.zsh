@@ -96,7 +96,7 @@ set(CMAKE_MODULE_PATH \${CMAKE_SOURCE_DIR}/cmake/modules)
 set(CMAKE_CXX_FLAGS "-std=c++11 -pedantic -Wall -Weffc++ -Wcast-align ")
 set(CMAKE_CXX_FLAGS_DEBUG "-g")
 
-set(EXECUTABLE_OUTPUT_PATH "\${CMAKE_SOURCE_DIR}/bin/")
+set(EXECUTABLE_OUTPUT_PATH "\${CMAKE_CURRENT_BINARY_DIR}/bin/")
 
 subdirs(${project_name})
 EOF
