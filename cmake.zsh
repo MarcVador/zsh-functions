@@ -98,7 +98,7 @@ set(CMAKE_CXX_FLAGS_DEBUG "-g")
 
 set(EXECUTABLE_OUTPUT_PATH "\${CMAKE_CURRENT_BINARY_DIR}/bin/")
 
-subdirs(${project_name})
+subdirs(\${PROJECT_NAME})
 EOF
 
     cat <<EOF > "${project_path}/${project_name}/CMakeLists.txt"
