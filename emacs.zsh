@@ -7,5 +7,14 @@ function emx {
 }
 
 function ediff {
-    emacsclient -a "" -c --eval "(ediff-files \"$1\" \"$2\")"
+    emacsclient -a "" -t --eval "(ediff-files \"$1\" \"$2\")"
+}
+
+function hexl {
+    while (( $# > 1))
+    do
+        emacsclient -a "" -t -u --eval "(progn (find-file \"$1\")(nhexl-mode)(save-buffers-kill-terminal))"
+        shift
+    done
+    emacsclient -a "" -t -u --eval "(progn (find-file \"$1\")(nhexl-mode))"
 }
