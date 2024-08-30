@@ -39,6 +39,7 @@ function in_subnet() {
 function grep_subnet() {
     if [ "$#" -ne 2 ]; then
         echo "Usage: grep_subnet <file with subnets> <file with IP addresses>"
+        exit 1
     fi
 
     if [ ! -f "$1" ] || [ ! -f "$2" ]; then
